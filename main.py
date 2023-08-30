@@ -65,20 +65,20 @@ frame.place(relx=0.12,rely=0.15)
 saldo_disponivel_label = tk.Label(root, text="Saldo disponível: 0")
 saldo_disponivel_label.pack()
 
-valor_label = tk.Label(root, text="Digite o valor:")
+valor_label = tk.Label(frame, text="Digite o valor e execute a ação desejada:",font=('Roboto',12))
 valor_label.place(relx=0.12,rely=0.05)
 
-valor_entry = tk.Entry(root)
-valor_entry.place(relx=0.12,rely=0.15)
+valor_entry = tk.Entry(frame,font=('Roboto',12))
+valor_entry.place(relx=0.12,rely=0.2,relheight=0.2,relwidth=0.65)
 
-depositar_button = tk.Button(root, text="Depositar", command=depositar)
-depositar_button.pack()
+depositar_button = tk.Button(root, text="Deposito", command=depositar,font=('Roboto',16))
+depositar_button.place(relx=0.67,rely=0.15,relwidth=0.202,relheight=0.06)
 
-sacar_button = tk.Button(root, text="Sacar", command=sacar)
-sacar_button.pack()
+sacar_button = tk.Button(root, text="Saque", command=sacar,font=('Roboto',16))
+sacar_button.place(relx=0.67,rely=0.224,relwidth=0.202,relheight=0.06)
 
-ver_saldo_button = tk.Button(root, text="Ver Saldo", command=ver_saldo)
-ver_saldo_button.pack()
+ver_saldo_button = tk.Button(root, text="Consultar \n Saldo", command=ver_saldo,font=('Roboto',16))
+ver_saldo_button.place(relx=0.67,rely=0.292,relheight=0.12,relwidth=0.202)
 
 saldo_label = tk.Label(root, text="Seu saldo atual é: 0")
 saldo_label.pack()
